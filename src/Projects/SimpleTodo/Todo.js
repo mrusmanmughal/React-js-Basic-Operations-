@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Todo.css";
-import Navbar from "../../Navbar";
 
 function Todo() {
   const [tododata, settododata] = useState();
@@ -23,7 +22,6 @@ function Todo() {
   };
   return (
     <div className="Todo">
-      <Navbar />
       <h1 className="m-3">Todo list</h1>
       <div className="container">
         <div class="input-group mb-3">

@@ -6,11 +6,16 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 import Route from "./Route";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { BrowserRouter } from "react-router-dom";
+import store from "./Store";
+import { Provider } from "react-redux";
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Route />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Route />
+      </BrowserRouter>
+    </Provider>
+    ,
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../../Navbar";
+
 import "./Table";
 const Table = () => {
   const [Table, setstate] = useState({
@@ -25,15 +25,12 @@ const Table = () => {
   };
   const dell = (index) => {
     state.splice(index, 1);
-    // setstate((items) => {
-    //   return items.splice(index, 1);
-    // });
+
     setstate(state);
   };
   return (
     <>
-      <Navbar />
-
+      <h1>Table In React js </h1>
       <div container>
         <div className="row">
           <div className="  container">
@@ -90,7 +87,7 @@ const Table = () => {
           </div>
         </div>
       </div>
-      <h1>Table In React js </h1>
+
       <div className="container-fluid">
         <table class="table border border-5 border-secondary table-hover">
           <thead>

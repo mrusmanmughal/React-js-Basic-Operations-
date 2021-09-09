@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../../Navbar";
+
 const Form = () => {
   const [formData, setState] = useState({
     name: "",
@@ -22,7 +22,6 @@ const Form = () => {
 
   return (
     <>
-      <Navbar />
       <h1>React Forms</h1>
       <section className="Form bg-info">
         <div className="container p-5 ">

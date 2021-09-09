@@ -5,7 +5,7 @@ const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg">
         <div className="container-fluid">
-          <Link to="/" className="navbar-brand">
+          <Link to="/" exact className="navbar-brand">
             Home
           </Link>
           <button
@@ -22,23 +22,34 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link to="/simpletodo" className="nav-link  ">
+                <Link exact to="/simpletodo" className="nav-link  ">
                   Simple Todo
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/Form" className="nav-link">
+                <Link to="/Form" exact className="nav-link">
                   Form
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/Table" className="nav-link">
+                <Link to="/Table" exact className="nav-link">
                   Table
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/todoredux" className="nav-link">
+                <Link to="/crudTable" exact className="nav-link">
+                  Crud Table
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link to="/todoredux" exact className="nav-link">
                   Todo Redux
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/ReduxTable" exact className="nav-link">
+                  Redux Table
                 </Link>
               </li>
             </ul>
