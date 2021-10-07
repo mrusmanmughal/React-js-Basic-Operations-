@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 const ReduxTodo = () => {
   const [state, setstate] = useState();
   const dispatch = useDispatch();
+
   const Todo = useSelector((state) => state.TodoReducer.Todos);
   const handleChange = (e) => {
     setstate(e.target.value);
@@ -17,9 +18,9 @@ const ReduxTodo = () => {
 
   return (
     <>
+      <h1>Todo List Using React JS </h1>
       <div className="container w-50 shadow text-center border border-5">
-        <p className="h4">Todo List Using React JS </p>
-        <div class="input-group mb-3">
+        <div class="input-group mb-3 p-5">
           <input
             type="text"
             class="form-control"
@@ -38,17 +39,14 @@ const ReduxTodo = () => {
             Button
           </button>
         </div>
-        <ul>
+        <ol>
           {Todo.map((val, index) => (
             <li className="text-start text-uppercase ">
               {val.value}
-              <i
-                className="bi bi-trash text-danger h5"
-                onClick={() => dispatch(Dell_Todo(index))}
-              ></i>
+              {/* <i className="bi bi-trash text-danger h5"></i> */}
             </li>
           ))}
-        </ul>
+        </ol>
         <button
           class="btn btn-outline-secondary btn-lg"
           type="button"

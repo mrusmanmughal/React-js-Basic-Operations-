@@ -32,46 +32,38 @@ const Table = () => {
     <>
       <h1>Table In React js </h1>
       <div container>
-        <div className="row">
-          <div className="  container">
+        <div className="row ">
+          <div className="  container p-4">
             <form>
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">
-                  Name
-                </label>
                 <input
                   name="name"
                   value={name}
                   type="text"
                   class="form-control"
-                  id="exampleInputEmail1"
+                  placeholder="Enter Name"
                   aria-describedby="emailHelp"
                   onChange={(e) => handleChange(e)}
                 />
               </div>
               <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">
-                  Father Name
-                </label>
                 <input
                   type="text"
                   name="fname"
                   value={fname}
+                  placeholder="Enter F-name"
                   class="form-control"
                   id="exampleInputPassword1"
                   onChange={(e) => handleChange(e)}
                 />
               </div>
               <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">
-                  Email
-                </label>
                 <input
                   name="email"
                   value={email}
                   type="Email"
                   class="form-control"
-                  id="exampleInputPassword1"
+                  placeholder="Enter E-mail"
                   onChange={(e) => handleChange(e)}
                 />
               </div>
@@ -88,8 +80,8 @@ const Table = () => {
         </div>
       </div>
 
-      <div className="container-fluid">
-        <table class="table border border-5 border-secondary table-hover">
+      <div className="container-fluid mt-3 shadow-lg">
+        <table class="table border border-3 border-secondary table-hover">
           <thead>
             <tr>
               <th scope="col">#</th>

@@ -18,3 +18,13 @@ export const Dell_ALL = () => {
     type: "Dell_ALL",
   };
 };
+
+// Redux Crud Table action
+export const Push_Data = (Val) => {
+  return {
+    type: "Push_Data",
+    payload: {
+      TableData: Val,
+    },
+  };
+};

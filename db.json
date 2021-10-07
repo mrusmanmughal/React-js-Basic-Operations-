@@ -1,0 +1,56 @@
+{
+  "posts": [
+    {
+      "name": "shani",
+      "fname": "ji sjan",
+      "email": "hsnau",
+      "id": 1
+    }
+  ],
+  "User": [
+    {
+      "name": "a",
+      "fname": "JANinan",
+      "email": "mani",
+      "id": 1
+    },
+    {
+      "name": "yaho ",
+      "fname": "baba ",
+      "email": "technical",
+      "id": 2
+    }
+  ],
+  "ReduxTable": [
+    {
+      "name": "yaho ",
+      "fname": "baba ",
+      "email": "technical",
+      "id": 2
+    },
+    {
+      "name": "MUHAMMAD USMAN",
+      "fname": "MUHAMMADeee",
+      "email": "misterusman3@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "MUHAMMAD USMAN",
+      "fname": "MUHAMMADeeeeee",
+      "email": "misterusman3@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "MUHAMMAD USMAN",
+      "fname": "MUHAMMADeeeeee",
+      "email": "misterusman3@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "MUHAMMAD USMANe",
+      "fname": "eeeeeeeeeeee",
+      "email": "misterusman3@gmail.com",
+      "id": 6
+    }
+  ]
+}

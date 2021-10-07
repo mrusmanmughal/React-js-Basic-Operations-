@@ -1,25 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useParams } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
-const Addusers = () => {
+const EditReduxUser = () => {
   let history = useHistory();
+
   const [user, setUser] = useState({
     name: "",
     fname: "",
     email: "",
   });
   const { name, email, fname } = user;
+
+  // use Effect getting data from db
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const loadData = async () => {
+    const loadData = await axios.get(`http://localhost:3099/ReduxTable `);
+    setUser(loadData.data);
+  };
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
   const pushData = async (e) => {
     e.preventDefault();
-    await axios.post(`http://localhost:3099/posts`, user);
-    history.push("/crudTable");
+    await axios.post(`http://localhost:3099/ReduxTable`, user);
+    history.push("/ReduxTable");
   };
   return (
     <>
       <div className="container p-5">
+        <h2 className="text-uppercase">Redux Edit User</h2>
         <form>
           <div class="form-group">
             <label for="exampleInputEmail1">Name</label>
@@ -70,4 +82,4 @@ const Addusers = () => {
   );
 };
 
-export default Addusers;
+export default EditReduxUser;

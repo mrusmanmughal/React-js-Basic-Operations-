@@ -32,6 +32,11 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link to="/hookfrom" exact className="nav-link">
+                  Hoook form
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link to="/Table" exact className="nav-link">
                   Table
                 </Link>
@@ -50,6 +55,16 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link to="/ReduxTable" exact className="nav-link">
                   Redux Table
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/weatherapp" exact className="nav-link">
+                  Weather App
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/Calculator" exact className="nav-link">
+                  Calculator App
                 </Link>
               </li>
             </ul>

@@ -1,20 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
-const Addusers = () => {
+import { useHistory, useParams } from "react-router-dom";
+const Edit = () => {
   let history = useHistory();
+  const { id } = useParams();
   const [user, setUser] = useState({
     name: "",
     fname: "",
     email: "",
   });
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const loadData = async () => {
+    const loadData = await axios.get(`http://localhost:3099/posts/${id}`);
+    setUser(loadData.data);
+  };
   const { name, email, fname } = user;
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
   const pushData = async (e) => {
     e.preventDefault();
-    await axios.post(`http://localhost:3099/posts`, user);
+    await axios.put(`http://localhost:3099/posts/${id}`, user);
+
     history.push("/crudTable");
   };
   return (
@@ -70,4 +81,4 @@ const Addusers = () => {
   );
 };
 
-export default Addusers;
+export default Edit;
